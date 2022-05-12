@@ -1,9 +1,15 @@
+/* div, section {
+  border: 1px red solid;
+} */
+
 .page {
   min-width: 1100px;
   max-width: 1600px;
   margin: 0 auto;
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
+
+/* Header */
 
 .header {
   height: 100vh;
@@ -21,6 +27,7 @@
   line-height: 96px;
   font-size: 102px;
   z-index: 10;
+  color: black;
 }
 
 .header__subtitle {
@@ -32,6 +39,7 @@
   line-height: 25px;
   font-size: 18px;
   margin: 0;
+  color: black;
 }
 
 .header__link {
@@ -70,6 +78,55 @@
   position: absolute;
   top: 30px;
   left: 64px;
+}
+
+/* Content */
+
+.content {
+  width: 100%;
+}
+
+.description {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.two-columns {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.two-columns__brief {
+  width: 175px;
+  margin: 0;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  color: #2f80ed;
+}
+
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
+}
+
+.two-columns__paragraph {
+  margin: 0 0 30px 0;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.two-columns__paragraph:last-of-type {
+  margin-bottom: 0;
+}
+
+.two-columns__span-accent {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 /* и элемента с модификатором вида ключ-значение */
