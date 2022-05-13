@@ -9,10 +9,6 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* ------ */
-/* Header */
-/* ------ */
-
 .header {
   height: 100vh;
   min-height: 600px;
@@ -28,6 +24,7 @@
   margin: 0 0 0 64px;
   line-height: 96px;
   font-size: 102px;
+  position: relative;
   z-index: 10;
   color: black;
 }
@@ -73,24 +70,23 @@
 .logo {
   width: 228px;
   height: 32px;
-  z-index: 10;
 }
 
 .logo_place_header {
   position: absolute;
+  z-index: 10;
   top: 30px;
   left: 64px;
+  background-image: url(../images/logo_place_header.svg);
 }
 
-/* ------- */
-/* Content */
-/* ------- */
+.logo_place_footer {
+  background-image: url(../images/logo_place_footer.svg);
+}
 
 .content {
   width: 100%;
 }
-
-/* Descrition */
 
 .description {
   padding-top: 100px;
@@ -135,13 +131,14 @@
   font-weight: bold;
 }
 
-/* Digits */
-
-.digits {
-  padding: 100px 0;
+.table-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.digits {
+  padding: 100px 0;
 }
 
 .section-title {
@@ -153,6 +150,10 @@
   font-weight: 700;
 }
 
+.section-title_theme_dark {
+  color: white;
+}
+
 .section-subtitle {
   width: 60%;
   text-align: center;
@@ -161,6 +162,10 @@
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
+}
+
+.section-subtitle_theme_dark {
+  color: white;
 }
 
 .table {
@@ -174,6 +179,12 @@
 .table__cell {
   width: 250px;
   margin-top: 60px;
+}
+
+.table__cell_theme_dark {
+  width: 200px;
+  color: white;
+  margin-top: 80px;
 }
 
 .table__heading {
@@ -191,12 +202,133 @@
   font-weight: normal;
 }
 
+.feynman {
+  background-color: #f2f2f2;
+  background-image: url(../images/feynman.png);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 867px 637px;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  /* TODO решить с высотой блока */
+  min-height: 790px;
+}
 
+.feynman__title {
+  margin: 0;
+  width: 648px;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: 700;
+}
 
-/* и элемента с модификатором вида ключ-значение */
-/* .table__cell_theme_dark {
-  width: 200px;
+.feynman__subtitle {
+  margin: 70px 0 0 0;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.feynman__link {
+  position: absolute;
+  right: 48px;
+  top: 50%;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #2f80ed;
+}
+
+.feynman__link::after {
+  content: ' →';
+}
+
+/* TODO z-index отрицательный для блока - шляпа, при отладке блок не цепляется мышкой */
+
+.kaufman {
+  background-color: #1f1f1f;
+  padding: 90px 0;
+  overflow: hidden;
+  position: relative;
+  z-index: -20;
+}
+
+.kaufman__triangle {
+  position: absolute;
+  right: -210px;
+  top: 0;
+  width: 877px;
+  height: 877px;
+  z-index: -10;
+}
+
+.footer {
+  background-color:#1f1f1f;
+  padding: 60px 0 40px;
+}
+
+.footer__columns {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__column_content_copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-basis: 711px;
+}
+
+.footer__author {
+  margin: 18px 0;
   color: white;
-  margin-right: 0;
-  margin-top: 80px;
-} */
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.footer__author::before {
+  content: '© ';
+}
+
+.footer__column-heading {
+  color: white;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.footer__column-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+
+}
+
+.footer__column-link {
+  color: white;
+  text-decoration: none;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.footer__column-link:hover {
+  color: #2f80ed;
+}
+
+.footer__cocial-icon {
+  width: 16px;
+  height: 16px;
+}
+
