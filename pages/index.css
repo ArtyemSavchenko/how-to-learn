@@ -45,3 +45,5 @@
 @import url(../blocks/footer/__column-link/footer__column-link.css);
 @import url(../blocks/footer/__social-icon/footer__social-icon.css);
 @import url(../blocks/oakley/oakley.css);
+@import url(../blocks/rotation/rotation.css);
+@import url(../blocks/rotation/_figure/rotation_figure_triangle.css);
